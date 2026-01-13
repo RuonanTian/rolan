@@ -20,6 +20,13 @@ $('a[href^="#"]').on("click", function(e){
 	$('html, body').stop().animate({
 		scrollTop: $(anchor.attr('href')).offset().top
 	}, 1000);
+	
+	// 关闭菜单
+	$(".hamburger-menu").removeClass("open");
+	$(".menu-wrapper").removeClass("open");
+	$("body, html").removeClass("ham-active");
+	$('body, html').css("overflow", "");
+	
 	e.preventDefault();
 });
 
