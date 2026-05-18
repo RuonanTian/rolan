@@ -1,1 +1,116 @@
-/* Write your custom styles here */
+/* Minimal custom styles for a simple, static CV site */
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	color: #222;
+	background: #fff;
+	line-height: 1.5;
+}
+.module-title {
+	font-size: 1.6rem;
+	margin-bottom: 0.5rem;
+}
+.featured-publication {
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+.featured-publication h4 { margin: .25rem 0; font-size: 1.05rem; }
+.featured-publication a { color: #187b73; font-weight: 600; }
+.other-pubs li { color: #333; }
+.nav .nav-link { color: #333; margin-left: 0.75rem; }
+.nav .nav-link:hover { color: #187b73; }
+
+/* Reduce visual noise from original animations */
+.wow { visibility: visible !important; }
+
+/* Small responsive tweaks */
+@media (max-width: 768px) {
+	.featured-publication { padding: 1rem; }
+}
+
+/* Publications list styles */
+.pub-list { list-style: none; padding-left: 0; margin-top: 0.5rem; }
+.pub-item { padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+.pub-item strong { color: #222; }
+.pub-item em { color: #555; }
+
+/* Research block */
+#research p { margin-bottom: 0.75rem; }
+#research ul { margin-top: 0.5rem; }
+
+/* Make publications readable on small screens */
+@media (max-width: 576px) {
+  .pub-item { font-size: 0.95rem; }
+}
+
+/* Highlight main author name */
+.author-highlight { font-weight: 700; color: #0b6f66; background: rgba(97,183,173,0.08); padding: 0 4px; border-radius: 3px; }
+
+/* Highlighted publications box */
+.highlight-box { border: 1px solid #e6f3f1; background: #fbfffe; padding: 1rem; margin-bottom: 1.25rem; box-shadow: 0 2px 6px rgba(11,111,102,0.04); }
+.highlight-box .module-title { margin-bottom: 0.5rem; }
+.highlighted-list .pub-item { padding: 0.6rem 0; }
+
+/* Journal and year styling */
+.pub-journal { font-style: italic; color: #0b66d6; font-weight: 700; }
+.pub-year { color: #666; margin-left: 0.35rem; }
+
+.other-publications .pub-item { color: #333; }
+
+/* Awards vertical layout */
+.awards-list { list-style: none; padding-left: 0; }
+.awards-list li { padding: .5rem 0; border-left: 3px solid transparent; margin-bottom: .25rem; }
+.awards-list li strong { color: #0b6f66; }
+
+/* Skills layout */
+.skills-grid { display: flex; gap: 1rem; flex-wrap: wrap; }
+.skill-card { flex: 1 1 240px; border: 1px solid #f0f0f0; padding: 0.75rem; border-radius: 6px; background: #fff; }
+.skill-card h4 { margin-top: 0; font-size: 1rem; }
+
+/* Software & Database */
+.software-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
+.software-item { border: 1px solid #f0f0f0; padding: .75rem; border-radius:6px; }
+
+/* Conferences & Reviewer */
+.conferences-list, .reviewer-list { list-style: none; padding-left: 0; }
+.conferences-list li, .reviewer-list li { padding: .35rem 0; }
+
+/* Section spacing and visual separation */
+.module { padding-top: 2rem; padding-bottom: 2rem; }
+.module + .module { margin-top: 0.75rem; border-top: 1px solid #fbfbfb; }
+.module-header { margin-bottom: 0.75rem; }
+.module-line { height: 4px; width: 56px; background: #e6f3f1; margin-top: 0.5rem; border-radius: 2px; }
+
+/* Contact formatting */
+.contact-row { gap: 1rem; }
+.contact-info p, .contact-links p { margin-bottom: 0.45rem; }
+.contact-links a { color: #0b6f66; font-weight: 600; text-decoration: none; }
+.contact-links a:hover { text-decoration: underline; }
+
+
+/* Profile photo */
+.profile-photo { max-width: 240px; border: 4px solid #f3fbfa; box-shadow: 0 6px 18px rgba(11,111,102,0.08); }
+
+/* Research highlight box */
+.research-highlight { border-left: 4px solid #61b7ad; background: linear-gradient(180deg,#fbfffe, #ffffff); border-radius:6px; }
+.research-highlight h2 { margin-top: 0; }
+
+/* Research keyword highlight */
+.ri-keyword { font-weight: 700; color: #0b66d6; background: rgba(11,102,214,0.06); padding: 0 4px; border-radius: 3px; }
+
+/* Conferences */
+.conference-item { display: block; padding: 0.6rem 0; border-bottom: 1px dashed #eee; }
+.conf-meta { display: flex; gap: 0.6rem; align-items: center; flex-wrap: nowrap; }
+.conf-tag { background: #e6f3f1; color: #0b6f66; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700; font-size: 0.9rem; display: inline-block; }
+.conf-loc { color: #666; display: inline-block; }
+.conf-detail { color: #333; }
+.conf-title { display: block; margin-top: 0.5rem; color: #222; font-weight: 600; line-height: 1.35; }
+
+/* Conference multi-line layout */
+.conf-meta { display:flex; gap:0.6rem; align-items:center; }
+.conf-loc { color:#666; }
+.conf-title { margin-top:0.35rem; color:#222; font-weight:500; }
+
+@media (max-width: 576px) {
+	.profile-photo { max-width: 140px; margin-bottom: 0.75rem; }
+	.conf-meta { flex-wrap: wrap; gap: 0.4rem; }
+	.conf-title { margin-top: 0.4rem; }
+}

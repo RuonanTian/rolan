@@ -1,14 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Ruonan Tian | Ph.D. in Bioinformatics</title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link href="css/all.css" rel="stylesheet" media="screen">
-	<link href="css/vendor.css" rel="stylesheet">
-	<link href="css/Tigris.css" rel="stylesheet" media="screen">
 	<link href="css/custom.css" rel="stylesheet" media="screen">
-	<link rel="stylesheet" href="css/time.css">
 	<style>
 		.selected-pub { border-left: 4px solid #61b7ad; padding-left: 15px; background-color: #f9f9f9; margin-bottom: 20px; }
 		.other-pub { padding-left: 19px; margin-bottom: 15px; opacity: 0.85; }
@@ -17,55 +13,90 @@
 </head>
 <body>
 
-	<div id="loading">
-		<div id="loading-center">
-			<div class="spinner-grow" role="status"><span class="sr-only">Loading...</span></div>
-		</div>
-	</div>
-
-	<div class="menu-wrapper">
-		<button class="hamburger-menu">
-			<span class='hamburger'></span>
-			<span class='hamburger-overlay'></span>	
-		</button>
-		<div class="Menu ham-tilt">
-			<ul class="Menu-list">
-				<li class="Menu-list-item"><a href="#home">Home</a></li>
-				<li class="Menu-list-item"><a href="#education">Education</a></li>
-				<li class="Menu-list-item"><a href="#publications">Publications</a></li>
-				<li class="Menu-list-item"><a href="#awards">Awards</a></li>
-				<li class="Menu-list-item"><a href="#skills">Skills</a></li>
-				<li class="Menu-list-item"><a href="#software">Software & Database</a></li>
-				<li class="Menu-list-item"><a href="#contact">Contact</a></li>
+	<nav class="navbar navbar-light bg-light">
+		<div class="container d-flex justify-content-between align-items-center">
+			<a class="navbar-brand" href="#home">Ruonan Tian</a>
+			<ul class="nav">
+				<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+				<li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+				<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+				<li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+				<li class="nav-item"><a class="nav-link" href="#skills">Others</a></li>
+				<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 			</ul>
 		</div>
-	</div>
+	</nav>
 
-	<section id="home" class="home-banner module-image js-height-full">
-		<div class="hero-banner-content d-flex align-items-center">
-			<div class="container">
-				<div class="d-table">
-					<div class="hero-banner-left d-table-cell w-60 v-align-middle">
-						<div class="intro">
-							<h3>Hello,</h3>
-							<h1>I am <span>Ruonan Tian</span></h1>
-							<p class="typed" data-elements="Ph.D. student in Bioinformatics., Researcher., Computational Biologist.">A </p>
-							<p style="color: #bbbbbb; margin-top: 15px;">
-								I specialize in multi-omics data analysis and computational framework development, with a focus on spatial transcriptomics and spatial metabolomics to decode cellular and immune heterogeneity in intestinal tissues.
-							</p>
-						</div>
+	<section id="home" class="home-banner py-5">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-7">
+					<h3>Hello,</h3>
+					<h1>I am <span>Ruonan Tian</span></h1>
+					<p class="text-muted mt-3">
+						I'm a PhD student in Bioinformatics at Zhejiang University, specializing in multi-omics data analysis and computational framework development.
+					</p>
+
+				</div>
+				<div class="col-md-3 text-center">
+					<img src="images/about.jpg" alt="Ruonan Tian" class="profile-photo img-fluid rounded-circle">
+				</div>
+		</div>
+	</section>
+
+
+	<!-- Research: prominent summary box -->
+	<section id="research" class="module py-4">
+		<div class="container">
+			<div class="research-highlight p-3 mb-3">
+				<h2 class="module-title">Research Interests</h2>
+				<p>
+					My research focuses on developing computational methods and analytical frameworks for <span class="ri-keyword">spatial multi-omics</span> data. During my PhD, I have been working on integrative approaches for <span class="ri-keyword">cross-sample</span> and <span class="ri-keyword">cross-modal</span> integration of spatial transcriptomics and spatial metabolomics, as well as the development of <span class="ri-keyword">single-cell TCR</span> sequencing methods. I have also applied multi-omics approaches to the study of intestinal tissues, aiming to better understand <span class="ri-keyword">tissue organization</span> and <span class="ri-keyword">immune heterogeneity</span>.
+				</p>
+				<p>
+					I am particularly interested in tackling the challenges of high-dimensional and heterogeneous biological data by designing novel computational methods (including <span class="ri-keyword">machine learning</span> and <span class="ri-keyword">statistical modeling</span>) that can extract meaningful biological insights and improve the analysis of omics datasets.
+				</p>
+				<p>
+					Looking forward, my research interests lie in developing <span class="ri-keyword">AI-driven computational frameworks</span> for multi-omics integration and constructing large-scale, high-resolution <span class="ri-keyword">cellular and molecular atlases</span> across tissues and disease contexts.
+				</p>
+			</div>
+		</div>
+	</section>
+	<!-- Publications moved up to be prominent -->
+	<section id="publications" class="module py-5">
+		<div class="container">
+			<div class="mb-4">
+				<h2 class="module-title">Publications</h2>
+				<hr>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<!-- Combined highlighted + other publications -->
+					<div class="highlight-box">
+					  <h3 class="module-title">Highlighted publications</h3>
+					  <ul class="list-unstyled highlighted-list">
+					    <li class="pub-item"><span class="author-highlight">Tian, R.*</span>, Chen, Y., Qi, Y., Xue, Z., Liu, W.#. <strong>ScSpaTCR:</strong> An Integrated Platform for Single-Cell Resolution Spatial Sequencing of T Cell Receptor Repertoires. <span class="pub-year">(In preparation)</span></li>
+					    <li class="pub-item"><span class="author-highlight">Tian, R.*</span>, Xue, Z.*, Chen, Y ., Qi, Y ., Zhang, J., Yuan, J., Ruan, D., Lin, J., Liu, J., Wang, D., Ye, Y ., Liu, W.#. Integrating Cross-Sample and Cross-Modal Data for Spatial Transcriptomics and Metabolomics with SpatialMETA.<span class="pub-journal">Nature Communications</span><span class="pub-year">, 2025</span></li>
+					    <li class="pub-item"><span class="author-highlight">Tian, R.*</span>, Yu, Z.*, Xue, Z., Wu, J., Wu, L., Cai, S., Gao, B., He, B., Zhao, Y ., Yao, J., Lu, L., Liu, W.#. Evaluation of T Cell Receptor Construction Methods from scRNA-Seq Data. <span class="pub-journal">Genomics, Proteomics &amp; Bioinformatics</span><span class="pub-year">, 2024</span></li>
+					    <li class="pub-item"><span class="author-highlight">Tian, R.*</span>, Xue, Z.*, Ruan, D.*, Chen, P ., Xu, Y ., Dai, C., Shen, W., Ouyang, H.#, Liu, W.#, Lin, J.#. MSdb: an integrated expression atlas of human musculoskeletal system. <span class="pub-journal">iScience</span><span class="pub-year">, 2023</span></li>
+					    <li class="pub-item">Zhang, J.*, <span class="author-highlight">Tian, R.*</span> , Liu, J.*, Yuan, J.*, Zhang, S., Chi, Z., Yu, W., Yu, Q., Wang, Z., Chen, S., Li, M., Yang, D., Hu, T ., Deng, Q., Lu, X., Yang, Y ., Zhou, R., Zhang, X., Liu, W.#, Wang, D.#. A two-front nutrient supply environment fuels the physiology of the small intestine through differential regulation of nutrient absorption and host defense. <span class="pub-journal">Cell</span><span class="pub-year">, 2024</span></li>
+					    <li class="pub-item">Ruan, D.*, <span class="author-highlight">Tian, R.*</span> , Li, Z., Yin, L., Tian, W., Chen, X., Xu, Y ., Meng, Q., Zhou, W., Liu, H., Cai, H., Wang, X., Luo, Q., Lin, J.#, Liu, W.#, Shen, W.#. A Multi-Omics Atlas of Human MSCs Reveals Therapeutic Heterogeneity across Tissues and Clones. <span class="pub-journal">Cell Stem Cell</span> <span class="pub-year">(Under review)</span></li>
+					  </ul>
 					</div>
-					<div class="hero-banner-right d-table-cell w-40 v-align-middle">
-						<div class="hero-right" id="scene">
-							<img data-depth="0.5" src="images/about.jpg" alt="Ruonan Tian">
-						</div>
+					<div class="other-publications">
+					  <h4 class="module-title">Other publications</h4>
+					  <ul class="list-unstyled pub-list">
+					    <li class="pub-item">Chen, Y .*, Yan, Y .*, <span class="author-highlight">Tian, R.</span>, Sheng, Z., Li, L., Chen, J., Liao, Y., Wen, Y., Lu, J., Liu, X., Sun, W., Wu, H., Liao, Y., Zhang, X., Chen, X., An, C., Zhao, K., Liu, W., Gao, J., Hay, D. C., Ouyang, H.#. Chemically programmed metabolism drives a superior cell fitness for cartilage regeneration. <span class="pub-journal">Science Advances</span><span class="pub-year">, 2024</span></li>
+					    <li class="pub-item">Xue, Z.*, Wu, L.*, <span class="author-highlight">Tian, R.</span>, Gao, B., Zhao, Y., He, B., Sun, D., Zhao, B., Li, Y., Zhu, K., Wang, L., Yao, J.#, Liu, W.#, Lu, L.#. Integrative mapping of human CD8+ T cells in inflammation and cancer. <span class="pub-journal">Nature Methods</span><span class="pub-year">, 2024</span></li>
+					    <li class="pub-item">Xue, Z.*, Wu, L.*, Gao, B.*, <span class="author-highlight">Tian, R.</span>, Chen, Y., Qi, Y., Dong, T., Liu, Z., Bai, Y., Sun, D., Guo, Y., Chen, P., Zhao, Y., He, B., Wang, L., Yao, J., Lu, L.#, Liu, W.#. Disease associated human TCR characterization by deep-learning framework TCR.Deepinsight: A pan-disease single-cell TCRαβ repertoire reference atlas. <span class="pub-journal">Cell Discovery</span><span class="pub-year">, 2025</span></li>
+					    <li class="pub-item">Xiang, Y .*, Qian, Y .*, Li, Z.*, Wang, J*, <span class="author-highlight">Tian, R.</span>, Meng, W., Bu, J., Huang, F., Ai, Z., Wu, D., Chen, X., Wu, Y., Shen, L., Chan, Y.-S., Gao, Y., Ma, J., Liu, W.#, Gao, S.#, Zhang, D.#, Liang, H.#. Endogenous retroviruses synthesize heterologous chimeric RNAs to reinforce human early embryonic development. <span class="pub-journal">Science</span><span class="pub-year">, 2026</span></li>
+					  </ul>
 					</div>
 				</div>
 			</div>
-		</div>	
-		<canvas class="background"></canvas>
+		</div>
 	</section>
-
 	<section id="education" class="module module-gray">
 		<div class="container">
 			<div class="module-header wow fadeInUp">
@@ -95,84 +126,28 @@
 			</div>
 		</div>
 	</section>
-
-	<section id="publications" class="module">
-		<div class="container">
-			<div class="module-header wow fadeInUp">
-				<h2 class="module-title">Publications</h2>
-				<div class="module-line"></div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					
-					<h3 class="mb-4">First / Co-first Authorship</h3>
-					
-					<div class="selected-pub wow fadeInUp">
-						<span class="pub-label">Featured Publication</span>
-						<strong>Tian, R.*</strong>, Xue, Z.*, et al. Integrating Cross-Sample and Cross-Modal Data for Spatial Transcriptomics and Metabolomics with SpatialMETA. <em>Nature Communications</em>, 16, 8855 (2025). <a href="https://doi.org/10.1038/s41467-025-63915-z" target="_blank">DOI</a>
-					</div>
-
-					<div class="selected-pub wow fadeInUp">
-						<span class="pub-label">Featured Publication</span>
-						Zhang, J.*, <strong>Tian, R.*</strong>, et al. A two-front nutrient supply environment fuels the physiology of the small intestine through differential regulation of nutrient absorption and host defense. <em>Cell</em>, 187, 6251-6271.e20 (2024). <a href="https://doi.org/10.1016/j.cell.2024.08.012" target="_blank">DOI</a>
-					</div>
-
-					<div class="other-pub">
-						<strong>Tian, R.*</strong>, Yu, Z.*, et al. Evaluation of T Cell Receptor Construction Methods from scRNA-Seq Data. <em>Genomics, Proteomics & Bioinformatics</em>, 22, qzae086 (2024). <a href="https://doi.org/10.1093/gpbjnl/qzae086" target="_blank">DOI</a>
-					</div>
-
-					<div class="other-pub">
-						<strong>Tian, R.*</strong>, Xue, Z.*, et al. MSdb: an integrated expression atlas of human musculoskeletal system. <em>iScience</em>, 26, 106933 (2023). <a href="https://doi.org/10.1016/j.isci.2023.106933" target="_blank">DOI</a>
-					</div>
-
-					<div class="other-pub">
-						Ruan, D.*, <strong>Tian, R.*</strong>, et al. A Multi-Omics Atlas of Human MSCs Reveals Therapeutic Heterogeneity across Tissues and Clones. <em>With editor in Cell</em>.
-					</div>
-
-					<hr class="my-5">
-
-					<h3 class="mb-4">Co-author Publications</h3>
-					<div class="other-pub">
-						Xue, Z.*, Wu, L.*, <strong>Tian, R.</strong>, et al. Integrative mapping of human CD8+ T cells in inflammation and cancer. <em>Nature Methods</em>, 22, 435-445 (2024). <a href="https://doi.org/10.1038/s41592-024-02530-0" target="_blank">DOI</a>
-					</div>
-					<div class="other-pub">
-						Xue, Z.*, Wu, L.*, Gao, B.*, <strong>Tian, R.</strong>, et al. Disease associated human TCR characterization by deep-learning framework TCR. Deepinsight: A pan-disease single-cell TCRαβ repertoire reference atlas. <em>Cell Discovery</em>, 11, 82 (2025). <a href="https://doi.org/10.1038/s41421-025-00836-7" target="_blank">DOI</a>
-					</div>
-					<div class="other-pub">
-						Chen, Y.*, Yan, Y.*, <strong>Tian, R.</strong>, et al. Chemically programmed metabolism drives a superior cell fitness for cartilage regeneration. <em>Science Advances</em>, 10, eadp4408 (2024). <a href="https://doi.org/10.1126/sciadv.adp4408" target="_blank">DOI</a>
-					</div>
-					<div class="other-pub">
-						Xiang, Y.*, Qian, Y.*, Li, Z.*, Wang, J.*, <strong>Tian, R.</strong>, et al. Endogenous retroviruses synthesize heterologous chimeric RNAs to reinforce human early embryonic development. <em>Science</em>, Accepted.
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
+	<!-- Awards moved to its own section -->
 	<section id="awards" class="module module-gray">
 		<div class="container">
 			<div class="module-header wow fadeInUp">
 				<h2 class="module-title">Awards & Scholarships</h2>
 				<div class="module-line"></div>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<ul class="list-unstyled">
-						<li><strong>National Scholarship</strong> (2025, 2023)</li>
-						<li><strong>ZJU PhD "Qiushi New Star" Program</strong> (2024)</li>
-						<li><strong>Outstanding Graduate Student</strong>, ZJU (2023)</li>
-					</ul>
-				</div>
-				<div class="col-md-6">
-					<ul class="list-unstyled">
-						<li><strong>Gold iGEM</strong> (Advisor/Leader/Member) (2018-2020)</li>
-						<li><strong>First Prize</strong>, Bioinformatics Design Competition (2019, 2020)</li>
-						<li><strong>Top 10 Stars of Entrepreneurship</strong>, HZAU (2020)</li>
-					</ul>
-				</div>
-			</div>
+			<ul class="awards-list mt-3">
+				<li><strong>National Scholarship</strong>, Zhejiang University — 2025, 2023</li>
+				<li><strong>ZJU PhD "Qiushi New Star" Program</strong>, Zhejiang University — 2024</li>
+				<li><strong>Outstanding Graduate Student</strong>, Zhejiang University — 2023</li>
+				<li><strong>Outstanding Graduate</strong>, Huazhong Agricultural University — 2021</li>
+				<li><strong>Gold iGEM (Advisor/Leader/Member)</strong>, Huazhong Agricultural University — 2018,2019,2020</li>
+				<li><strong>First Prize, Bioinformatics Design Competition</strong>, Huazhong Agricultural University— 2019, 2020</li>
+				<li><strong>Top 10 Stars of Entrepreneurship</strong>, Huazhong Agricultural University — 2020</li>
+			</ul>
 		</div>
 	</section>
+
+	<!-- Duplicate Publications section removed: publications moved up for prominence -->
+
+	<!-- Removed duplicate Awards section (replaced earlier) -->
 
 	<section id="skills" class="module">
 		<div class="container">
@@ -180,18 +155,22 @@
 				<h2 class="module-title">Skills</h2>
 				<div class="module-line"></div>
 			</div>
-			<div class="row text-center">
-				<div class="col-md-4">
+			<div class="skills-grid mt-3">
+				<div class="skill-card">
 					<h4>Programming</h4>
-					<p>Python (PyTorch, Scanpy), R (Seurat), SQL, HTML/CSS/JS</p>
+					<p>Python (NumPy, Pandas, Django, PyTorch, Scanpy), R (Seurat, ggplot2), HTML/CSS, JavaScript, SQL</p>
 				</div>
-				<div class="col-md-4">
-					<h4>Dry Lab</h4>
-					<p>Spatial Multi-omics, scRNA-seq, Algorithm & Web Development</p>
+				<div class="skill-card">
+					<h4>Dry Lab / Analysis</h4>
+					<p>Spatial multi-omics, scRNA-seq, scTCR-seq, Hi-C, ChIP-seq, ATAC-seq, RNA-seq; algorithm development; web development</p>
 				</div>
-				<div class="col-md-4">
+				<div class="skill-card">
 					<h4>Wet Lab</h4>
-					<p>Molecular cloning, ATAC-seq library, Spatial TCR library</p>
+					<p>T/B cell isolation, molecular cloning, ATAC-seq library prep, spatial TCR library</p>
+				</div>
+				<div class="skill-card">
+					<h4>Miscellaneous</h4>
+					<p>Linux, Git, Adobe Illustrator, Microsoft Office, LaTeX</p>
 				</div>
 			</div>
 		</div>
@@ -203,16 +182,59 @@
 				<h2 class="module-title">Software & Database</h2>
 				<div class="module-line"></div>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
+			<div class="software-list mt-3">
+				<div class="software-item">
 					<h4><a href="https://www.msdb.org.cn/" target="_blank">MSdb</a></h4>
-					<p>An integrated expression atlas of human musculoskeletal system</p>
+					<p>An integrated expression atlas of the human musculoskeletal system.</p>
 				</div>
-				<div class="col-md-6">
+				<div class="software-item">
 					<h4><a href="https://spatialmeta.readthedocs.io/en/latest/" target="_blank">SpatialMETA</a></h4>
-					<p>Integrating Cross-Sample and Cross-Modal Data for Spatial Transcriptomics and Metabolomics</p>
+					<p>An open framework for integrating spatial transcriptomics and spatial metabolomics.</p>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<!-- Conferences & Presentations -->
+	<section id="conferences" class="module">
+		<div class="container">
+			<div class="module-header wow fadeInUp">
+				<h2 class="module-title">Conferences & Presentations</h2>
+				<div class="module-line"></div>
+			</div>
+			<ul class="conferences-list mt-3">
+				<li class="conference-item">
+					<div class="conf-meta"><span class="conf-tag">14th National Conference on Bioinformatics and Systems Biology (2025)</span> <span class="conf-loc">Nanning, China — <strong>Poster</strong></span></div>
+					<div class="conf-title">Integrating cross-sample and cross-modal data for spatial transcriptomics and metabolomics with SpatialMETA</div>
+				</li>
+				<li class="conference-item">
+					<div class="conf-meta"><span class="conf-tag">GPB (2025)</span> <span class="conf-loc">Haining, China — <strong>Oral</strong></span></div>
+					<div class="conf-title">Integrating cross-sample and cross-modal data for spatial transcriptomics and metabolomics with SpatialMETA</div>
+				</li>
+				<li class="conference-item">
+					<div class="conf-meta"><span class="conf-tag">IMMUNOLOGY (2025)</span> <span class="conf-loc">Honolulu, USA — <strong>Poster</strong></span></div>
+					<div class="conf-title">High-Resolution Spatial Multi-Omics for Unraveling Immune Heterogeneity in Inflammatory Bowel Disease</div>
+				</li>
+				<li class="conference-item">
+					<div class="conf-meta"><span class="conf-tag">Human Cell Atlas Asia (2024)</span> <span class="conf-loc">Hong Kong, China — <strong>Poster</strong></span></div>
+					<div class="conf-title">SpatialMETA: A Novel Framework for Integrating Spatial Transcriptomics and Metabolomics Data</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Reviewer -->
+	<section id="reviewer" class="module module-gray">
+		<div class="container">
+			<div class="module-header wow fadeInUp">
+				<h2 class="module-title">Reviewer</h2>
+				<div class="module-line"></div>
+			</div>
+			<ul class="reviewer-list mt-3">
+				<li>Nature Methods (co-reviewer)</li>
+				<li>Genomics, Proteomics &amp; Bioinformatics</li>
+				<li>BioData Mining</li>
+			</ul>
 		</div>
 	</section>
 
@@ -222,11 +244,14 @@
 				<h2 class="module-title">Contact</h2>
 				<div class="module-line"></div>
 			</div>
-			<div class="row text-center">
-				<div class="col-md-12">
+			<div class="row align-items-center contact-row">
+				<div class="col-md-6 contact-info text-md-left text-center">
 					<p><strong>Address:</strong> 718 East Haizhou Rd. Haining, Zhejiang 314400, P.R. China</p>
-					<p><strong>Email:</strong> ruonan.23@intl.zju.edu.cn</p>
-					<p><strong>GitHub:</strong> <a href="https://github.com/RuonanTian">Ruonan Tian</a></p>
+					<p><strong>Email:</strong> <a href="mailto:ruonan.23@intl.zju.edu.cn">ruonan.23@intl.zju.edu.cn</a></p>
+				</div>
+				<div class="col-md-6 contact-links text-md-left text-center">
+					<p><strong>GitHub:</strong> <a href="https://github.com/RuonanTian" target="_blank">Ruonan Tian</a></p>
+					<p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=3kvst1wAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></p>
 				</div>
 			</div>
 		</div>
@@ -238,8 +263,6 @@
 		</div>
 	</footer>
 
-	<script src="js/vendor.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/custom.js"></script>
+	<!-- All JS removed to keep the site simple and static -->
 </body>
 </html>
